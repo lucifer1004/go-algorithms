@@ -62,3 +62,29 @@ var _ = Describe("Binary search first number larger than", func() {
 		})
 	})
 })
+
+var _ = Describe("Binary search first and last occurrence of", func() {
+	Describe("2 in [1,2,2,2,3]", func() {
+		arr := []int{1, 2, 2, 2, 3}
+		val := 2
+		It("should return [1, 3]", func() {
+			Expect(binarySearchFirstAndLast(arr, val)).To(Equal([2]int{1, 3}))
+		})
+	})
+
+	Describe("3 in [1,2,3]", func() {
+		arr := []int{1, 2, 3}
+		val := 3
+		It("should return [2, 2]", func() {
+			Expect(binarySearchFirstAndLast(arr, val)).To(Equal([2]int{2, 2}))
+		})
+	})
+
+	Describe("0 in [1,2,3]", func() {
+		arr := []int{1, 2, 3}
+		val := 0
+		It("should return [-1, -1]", func() {
+			Expect(binarySearchFirstAndLast(arr, val)).To(Equal([2]int{-1, -1}))
+		})
+	})
+})
