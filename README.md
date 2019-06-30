@@ -10,4 +10,4 @@
 
 - Binary Search Tree
 - Balanced Binary Search Tree
-- Heap
+- [Heap](heap/README.md)

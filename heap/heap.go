@@ -1,6 +1,8 @@
 package heap
 
-import "container/heap"
+import (
+	"container/heap"
+)
 
 type intHeap []int
 
@@ -39,6 +41,13 @@ func buildHeap(arr []int) *intHeap {
 		insert(h, v)
 	}
 	return h
+}
+
+func queryMin(h *intHeap) int {
+	if h.Len() > 0 {
+		return (*h)[0]
+	}
+	return -1
 }
 
 func deleteMin(h *intHeap) int {
