@@ -44,3 +44,21 @@ var _ = Describe("Binary search", func() {
 		}
 	})
 })
+
+var _ = Describe("Binary search first number larger than", func() {
+	Describe("2 in [1,2,3]", func() {
+		arr := []int{1, 2, 3}
+		val := 2
+		It("should return 3", func() {
+			Expect(binarySearchFirstLargerNumber(arr, val)).To(Equal(3))
+		})
+	})
+
+	Describe("3 in [1,2,3]", func() {
+		arr := []int{1, 2, 3}
+		val := 3
+		It("should return -1", func() {
+			Expect(binarySearchFirstLargerNumber(arr, val)).To(Equal(-1))
+		})
+	})
+})
