@@ -1,4 +1,4 @@
-package algo
+package bsearch
 
 // Search for integer `val` in an ascending and non-duplicate array `arr`
 // If `val` exists, return its index, otherwise return -1

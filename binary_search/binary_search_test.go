@@ -1,4 +1,4 @@
-package algo
+package bsearch
 
 import (
 	"math/rand"
@@ -8,7 +8,7 @@ import (
 	. "github.com/onsi/gomega"
 )
 
-func TestMinWindow(t *testing.T) {
+func TestBinarySearch(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Test Suite for binary search")
 }
