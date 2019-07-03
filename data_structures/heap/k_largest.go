@@ -5,14 +5,14 @@ func kLargest(arr []int, k int) int {
 		return -1
 	}
 
-	h := buildHeap(arr[0:k])
+	h := BuildHeap(arr[0:k])
 
 	for i := k; i < len(arr); i++ {
-		if arr[i] > queryMin(h) {
-			deleteMin(h)
-			insert(h, arr[i])
+		if arr[i] > QueryMin(h) {
+			DeleteMin(h)
+			Insert(h, arr[i])
 		}
 	}
 
-	return queryMin(h)
+	return QueryMin(h)
 }

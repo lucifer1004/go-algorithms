@@ -30,27 +30,27 @@ func (h *intHeap) Pop() interface{} {
 	return x
 }
 
-func insert(h *intHeap, val int) {
+func Insert(h *intHeap, val int) {
 	heap.Push(h, val)
 }
 
-func buildHeap(arr []int) *intHeap {
+func BuildHeap(arr []int) *intHeap {
 	h := &intHeap{}
 	heap.Init(h)
 	for _, v := range arr {
-		insert(h, v)
+		Insert(h, v)
 	}
 	return h
 }
 
-func queryMin(h *intHeap) int {
+func QueryMin(h *intHeap) int {
 	if h.Len() > 0 {
 		return (*h)[0]
 	}
 	return -1
 }
 
-func deleteMin(h *intHeap) int {
+func DeleteMin(h *intHeap) int {
 	if h.Len() > 0 {
 		return heap.Pop(h).(int)
 	}
