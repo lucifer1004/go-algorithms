@@ -15,5 +15,5 @@
 
 ### Utils
 
-- Fast exp
-- Fast multiply
+- [Fast Exponential](utils/fast_exp/README.md)
+- [Fast Multiplication](utils/fast_mul/README.md)
