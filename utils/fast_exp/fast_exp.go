@@ -1,4 +1,4 @@
-package fastexp
+package utils
 
 func fastExp(n, m, p int) int {
 	ans := 1

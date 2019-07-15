@@ -1,4 +1,4 @@
-package fastmul
+package utils
 
 import (
 	"math/rand"

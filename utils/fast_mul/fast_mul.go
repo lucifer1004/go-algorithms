@@ -1,4 +1,4 @@
-package fastmul
+package utils
 
 func fastMul(n, m, p int) int {
 	ans := 0
