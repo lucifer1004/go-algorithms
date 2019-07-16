@@ -2,9 +2,7 @@ package sort
 
 import "math/rand"
 
-type array []interface{}
-
-func (a array) quickSort(compareFunc func(i, j interface{}) int) {
+func (a array) quickSort(cmp compareFunc) {
 	if len(a) < 2 {
 		return
 	}
@@ -16,7 +14,7 @@ func (a array) quickSort(compareFunc func(i, j interface{}) int) {
 	a[pivot], a[right] = a[right], a[pivot]
 
 	for i := range a {
-		if compareFunc(a[i], a[right]) < 0 || (compareFunc(a[i], a[right]) == 0 && i < pivot) {
+		if cmp(a[i], a[right]) < 0 || (cmp(a[i], a[right]) == 0 && i < pivot) {
 			a[left], a[i] = a[i], a[left]
 			left++
 		}
@@ -24,6 +22,6 @@ func (a array) quickSort(compareFunc func(i, j interface{}) int) {
 
 	a[left], a[right] = a[right], a[left]
 
-	a[:left].quickSort(compareFunc)
-	a[left+1:].quickSort(compareFunc)
+	a[:left].quickSort(cmp)
+	a[left+1:].quickSort(cmp)
 }
