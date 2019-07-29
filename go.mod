@@ -7,5 +7,5 @@ require (
 	github.com/onsi/ginkgo v1.8.0
 	github.com/onsi/gomega v1.5.0
 	github.com/stamblerre/gocode v0.0.0-20190327203809-810592086997 // indirect
-	golang.org/x/tools v0.0.0-20190716021316-fefcef05abb1 // indirect
+	golang.org/x/tools v0.0.0-20190729095626-ff9f1409240a // indirect
 )
