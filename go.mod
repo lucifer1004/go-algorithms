@@ -1,6 +1,6 @@
 module github.com/lucifer1004/go-algorithms
 
-go 1.12
+go 1.19
 
 require (
 	github.com/onsi/ginkgo v1.8.0
